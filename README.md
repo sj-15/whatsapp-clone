@@ -1,16 +1,25 @@
-# whatsapp_clone
+WhatsApp Clone
 
-A new Flutter project.
+Full Stack Whatsapp Clone with Flutter, Firebase & Riverpod 2.0!
 
-## Getting Started
+Features
 
-This project is a starting point for a Flutter application.
+Phone Number Authentication
 
-A few resources to get you started if this is your first Flutter project:
+1-1 Chatting with Contacts Only
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Group Chatting
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Text, Image, GIF, Audio(Recording), Video & Emoji Sharing
+
+Status Visible to Contacts Only and Disappears after 24 hours
+
+Video Calling
+
+Online/Offline Status
+
+Seen Message
+
+Replying to Messages
+
+Auto Scroll on New Messages
