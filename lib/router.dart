@@ -3,10 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/common/widget/error.dart';
 import 'package:whatsapp_clone/features/auth/screens/login_screen.dart';
 
+import 'features/auth/screens/otp_screend.dart';
+
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case LoginScreen.routeName:
-      return MaterialPageRoute(builder: (context) => const LoginScreen());
+      return MaterialPageRoute(
+        builder: (context) => const LoginScreen(),
+      );
+    case OTPScreen.routeName:
+      final verificationId = settings.arguments as String;
+      return MaterialPageRoute(
+        builder: (context) => OTPScreen(
+          verficationID: verificationId,
+        ),
+      );
     default:
       return MaterialPageRoute(
         builder: (contex) => const Scaffold(
