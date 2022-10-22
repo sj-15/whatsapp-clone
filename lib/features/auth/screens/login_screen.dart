@@ -42,6 +42,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     }
   }
 
+  @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -77,7 +78,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 ),
               ],
             ),
-            SizedBox(height: size.height * 0.6),
+            SizedBox(height: size.height * 0.25),
             SizedBox(
               width: 90,
               child: CustomButton(
