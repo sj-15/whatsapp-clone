@@ -46,6 +46,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text('Enter your phone number'),
         elevation: 0,
@@ -74,11 +75,12 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   child: TextField(
                     controller: phonecontroller,
                     decoration: const InputDecoration(hintText: 'phone number'),
+                    keyboardType: TextInputType.number,
                   ),
                 ),
               ],
             ),
-            SizedBox(height: size.height * 0.25),
+            SizedBox(height: size.height * 0.60),
             SizedBox(
               width: 90,
               child: CustomButton(
