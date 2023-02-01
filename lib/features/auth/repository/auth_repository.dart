@@ -70,12 +70,12 @@ class AuthRepository {
         verificationId: verificationId,
         smsCode: userOTP,
       );
-      await auth.signInWithCredential(credential);
       Navigator.pushNamedAndRemoveUntil(
         context,
         UserInformationScreen.routeName,
         (route) => false,
       );
+      await auth.signInWithCredential(credential);
     } on FirebaseAuthException catch (e) {
       showSnackBar(context: context, content: e.message!);
     }
@@ -91,6 +91,12 @@ class AuthRepository {
       String uid = auth.currentUser!.uid;
       String photoUrl =
           'https://png.pngitem.com/pimgs/s/649-6490124_katie-notopoulos-katienotopoulos-i-write-about-tech-round.png';
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const MobilelayoutScreen(),
+          ),
+          ((route) => false));
       if (profilePic != null) {
         photoUrl = await ref
             .read(commonFirebaseStorageRepositoryProvider)
@@ -108,13 +114,6 @@ class AuthRepository {
         groupId: [],
       );
       firestore.collection('users').doc(uid).set(user.toMap());
-
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const MobilelayoutScreen(),
-          ),
-          ((route) => false));
     } catch (e) {
       showSnackBar(context: context, content: e.toString());
     }
