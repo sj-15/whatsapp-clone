@@ -3,6 +3,7 @@ import 'package:whatsapp_clone/common/utils/colors.dart';
 
 import '../features/chat/widget/contactlist.dart';
 import '../features/community/screens/communityscreen.dart';
+import '../features/contatcs/screens/select_contact_screen.dart';
 import '../features/status/screens/statuscontactsscreen.dart';
 
 class MobilelayoutScreen extends StatefulWidget {
@@ -99,7 +100,9 @@ class _MobilelayoutScreenState extends State<MobilelayoutScreen> {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, SelectContactList.routeName);
+          },
           backgroundColor: tabColor,
           child: const Icon(
             Icons.comment,
